@@ -40,7 +40,7 @@ public class WallPaperService implements WallPaperAPI {
 	public Floor getTotalSquareFeet() {
 		Integer total = 0;
 		for (Room r : rooms) {
-			if (Boolean.FALSE.equals(r.isCube())) total += r.calculateArea();
+			if (Boolean.TRUE.equals(r.isCube())) total += r.calculateArea();
 			else total += r.calculateArea() + r.smallSideArea();
 		}
 		return new Floor(this.rooms.size(), total);
